@@ -150,7 +150,7 @@ function showWelcome() {
                     posdesc = "老板来两斤福建人。";
                     break;
                 case "广西壮族自治区":
-                    posdesc = "广西山水甲天下";
+                    posdesc = "晚上一起去撩螺吃老友嘛？";
                     break;
                 case "海南省":
                     posdesc = "朝观日出逐白浪，夕看云起收霞光。";
