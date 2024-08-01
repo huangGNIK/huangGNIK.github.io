@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>凯GINK&#39;s blog</title>
+        <title>GINK&#39;s blog</title>
         <link>https://example.com/</link>
-        <description>Recent content on 凯GINK&#39;s blog</description>
+        <description>Recent content on GINK&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>凯GINK</copyright>
-        <lastBuildDate>Thu, 01 Aug 2024 03:28:48 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>First Post</title>
-        <link>https://example.com/p/first-post/</link>
-        <pubDate>Thu, 01 Aug 2024 03:28:48 +0800</pubDate>
+        <language>zh-cn</language>
+        <copyright>GINK</copyright>
+        <lastBuildDate>Thu, 01 Aug 2024 17:15:36 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>My First Post</title>
+        <link>https://example.com/p/my-first-post/</link>
+        <pubDate>Thu, 01 Aug 2024 17:15:36 +0800</pubDate>
         
-        <guid>https://example.com/p/first-post/</guid>
-        <description>&lt;p&gt;hello world&lt;/p&gt;
-&lt;h1 id=&#34;测试篇-上线hello-hugo&#34;&gt;测试篇-上线hello hugo
-&lt;/h1&gt;&lt;p&gt;2024-8-1，15：43&lt;/p&gt;
+        <guid>https://example.com/p/my-first-post/</guid>
+        <description>&lt;h1 id=&#34;测试篇-上线hello-hugo&#34;&gt;测试篇-上线hello hugo
+&lt;/h1&gt;&lt;p&gt;2024-8-1，15：43记录&lt;/p&gt;
 &lt;p&gt;终于能上线hugo，太难了，一步一个报错，尤其是推送githu总是报错，搞了个deploy.sh自动化部署，hugo比hexo便捷，Github Pages需要也自己一步步挂载上去，也用不了npm来直接安装deploy-git，然后命令部署。&lt;/p&gt;
 &lt;p&gt;不过今天测试成功上线博客终于成功啦（雀跃），现在对于这个stack主题还是很满意的，比hexo的安知鱼主题简洁。&lt;/p&gt;
 &lt;p&gt;代码只有敲出来才知道有多困难，再次感慨大佬们的开源精神&lt;/p&gt;

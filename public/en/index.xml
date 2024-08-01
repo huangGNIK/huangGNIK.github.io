@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Example Site</title>
-        <link>http://localhost:1313/en/</link>
-        <description>Recent content on Example Site</description>
+        <title>GINK&#39;s blog</title>
+        <link>https://example.com/en/</link>
+        <description>Recent content on GINK&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Example Person</copyright><atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>GINK</copyright><atom:link href="https://example.com/en/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
