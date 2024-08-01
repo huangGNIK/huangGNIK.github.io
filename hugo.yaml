@@ -2,8 +2,8 @@ baseurl: https://example.com
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: GINK's blog
-copyright: GINK
+title: 凯GINK's blog
+copyright: 凯GINK
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -16,13 +16,13 @@ hasCJKLanguage: false
 languages:
     en:
         languageName: English
-        title: GINK's blog
+        title: 凯GINK's blog
         weight: 1
         params:
             description: Example description
     zh-cn:
         languageName: 中文
-        title: GINK's blog
+        title: 凯GINK's blog
         weight: 2
         params:
             description: 野蛮生长
