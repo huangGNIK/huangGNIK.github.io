@@ -8,6 +8,4 @@ git commit -m 'deploy'
 
 git remote add origin git@github.com:huangGNIK/huangGNIK.github.io.git
 
-git branch -m master main
-
-git push -f git@github.com:huangGNIK/huangGNIK.github.io.git main#向存储库推送
+git push -u origin master
