@@ -6,6 +6,4 @@ git add -A
 
 git commit -m 'deploy'
 
-git remote add origin git@github.com:huangGNIK/huangGNIK.github.io.git
-
-git push -u origin master
+git push -f git@github.com:huangGNIK/huangGNIK.github.io.git main#向存储库推送
