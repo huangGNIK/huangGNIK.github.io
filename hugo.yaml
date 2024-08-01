@@ -11,28 +11,21 @@ DefaultContentLanguage: zh-cn
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: true
 
 languages:
-    en:
-        languageName: English
-        title: 凯GINK's blog
-        weight: 1
-        params:
-            description: Example description
+    #en:
+        #languageName: English
+        #title: 凯GINK's blog
+        #weight: 1
+        #params:
+            #description: Example description
     zh-cn:
         languageName: 中文
         title: 凯GINK's blog
         weight: 2
         params:
             description: 野蛮生长
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            description: وصف تجريبي
 
 services:
     # Change it to your Disqus shortname before using
@@ -63,7 +56,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: 自由散漫 野蛮生长 四季温暖
         avatar:
             enabled: true
             local: true
