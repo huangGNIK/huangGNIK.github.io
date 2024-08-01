@@ -3,10 +3,11 @@ title = 'My First Post'
 date = 2024-08-01T17:15:36+08:00
 draft = false
 +++
-
+<span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
 # 测试篇-上线
 
-hello hugo.
+hello hugo
 
 2024-8-1记录
 
