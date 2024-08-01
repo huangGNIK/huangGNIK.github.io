@@ -6,7 +6,7 @@ draft = false
 
 # 测试篇-上线hello hugo
 
-2024-8-1，15：43记录
+2024-8-1，15：43记录.
 
 终于能上线hugo，太难了，一步一个报错，尤其是推送githu总是报错，搞了个deploy.sh来自动化部署，Github Pages需要自己一步步挂载上去，也用不了npm来直接安装deploy-git，然后命令部署。
 
