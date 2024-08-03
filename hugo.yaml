@@ -121,7 +121,7 @@ params:
                 placeholder:
 
         twikoo:
-            envId:
+            envId: https://twikoo.huangweiquan.cc/
             region:
             path:
             lang:
