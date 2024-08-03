@@ -72,7 +72,7 @@ params:
 
     comments:
         enabled: true
-        provider: waline
+        provider: twikoo
 
         disqusjs:
             shortname:
