@@ -8,7 +8,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: https://www.pnglog.com/KzWwSW.jpg
 
     footer:
         since:
