@@ -26,6 +26,8 @@ hello hugo
 
 参考了以下博主的教程：
 
+.https://blog.echosec.top/
+
 ·https://blog.fiveth.cc/
 
 ·https://blog.linsnow.cn/
