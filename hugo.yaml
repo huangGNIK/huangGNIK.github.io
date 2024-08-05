@@ -242,7 +242,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-inject: 
-    - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
-    - <script async data-pjax src="/js/txmap.js"></script> # 腾讯位置API
