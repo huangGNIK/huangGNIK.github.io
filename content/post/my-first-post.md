@@ -26,17 +26,17 @@ hello hugo
 
 参考了以下博主的教程：
 
-.https://blog.echosec.top/
+. https://blog.echosec.top/
 
-·https://blog.fiveth.cc/
+· https://blog.fiveth.cc/
 
-·https://blog.linsnow.cn/
+· https://blog.linsnow.cn/
 
-·https://www.fomal.cc/
+· https://www.fomal.cc/
 
-·https://blog.anheyu.com/
+· https://blog.anheyu.com/
 
-
+...
 
 
 

@@ -6,6 +6,21 @@
         <description>Recent content in Categories on 凯GINK&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>凯GINK</copyright><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>凯GINK</copyright><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title></title>
+        <link>https://example.com/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/test/</guid>
+        <description>&lt;p&gt;title: &amp;ldquo;Test&amp;rdquo;
+description: &amp;ldquo;This is an example category&amp;rdquo;
+slug: &amp;ldquo;test&amp;rdquo;
+image: &amp;ldquo;hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg&amp;rdquo;
+style:
+background: &amp;ldquo;#2a9d8f&amp;rdquo;
+color: &amp;ldquo;#fff&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>
