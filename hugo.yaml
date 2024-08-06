@@ -55,7 +55,7 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
+        emoji: 
         subtitle: 自由散漫 野蛮生长 四季温暖
         avatar:
             enabled: true
@@ -208,11 +208,17 @@ menu:
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
+        - identifier: email
+          name: Email
+          url: mailto:你的邮箱地址
           params:
-              icon: brand-twitter
+              icon: email
+        - identifier: rss
+          name: RSS
+          url: https://blog.huangweiquan.cc/index.xml
+          params:
+              icon: rss
+
 
 related:
     includeNewer: true
