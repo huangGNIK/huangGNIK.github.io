@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title: 新功能 date: 2024-06-29 21:55:08 tags: 前后端代码 弄好公告栏的欢迎信息啦 找到之前失败的原因了：在腾讯位置服务获取”密钥“（key）以后，还要手动分配额度，不然无法使">
+<title>弄好公告栏的欢迎信息啦</title>
+
+<link rel='canonical' href='https://example.com/p/%E5%BC%84%E5%A5%BD%E5%85%AC%E5%91%8A%E6%A0%8F%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF%E5%95%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.95bc78af46b861e92d5b66d6e87f67444f8faacd30950d3550b61d8c66548e5f.css"><meta property='og:title' content="弄好公告栏的欢迎信息啦">
+<meta property='og:description' content="title: 新功能 date: 2024-06-29 21:55:08 tags: 前后端代码 弄好公告栏的欢迎信息啦 找到之前失败的原因了：在腾讯位置服务获取”密钥“（key）以后，还要手动分配额度，不然无法使">
+<meta property='og:url' content='https://example.com/p/%E5%BC%84%E5%A5%BD%E5%85%AC%E5%91%8A%E6%A0%8F%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF%E5%95%A6/'>
+<meta property='og:site_name' content='凯GINK&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hexo' /><meta property='article:published_time' content='2024-06-29T21:55:08&#43;08:00'/><meta property='article:modified_time' content='2024-06-29T21:55:08&#43;08:00'/>
+<meta name="twitter:title" content="弄好公告栏的欢迎信息啦">
+<meta name="twitter:description" content="title: 新功能 date: 2024-06-29 21:55:08 tags: 前后端代码 弄好公告栏的欢迎信息啦 找到之前失败的原因了：在腾讯位置服务获取”密钥“（key）以后，还要手动分配额度，不然无法使">
+    <link rel="shortcut icon" href="https://www.pnglog.com/KzWwSW.jpg" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+
+        <aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huf4e5485f3d752d6350d75429648808c0_55506_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">凯GINK&#39;s blog</a></h1>
+            <h2 class="site-description">自由散漫 野蛮生长 四季温暖</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='mailto:%e4%bd%a0%e7%9a%84%e9%82%ae%e7%ae%b1%e5%9c%b0%e5%9d%80'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/huangGNIK'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://blog.huangweiquan.cc/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hexo/" >
+                Hexo
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%BC%84%E5%A5%BD%E5%85%AC%E5%91%8A%E6%A0%8F%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF%E5%95%A6/">弄好公告栏的欢迎信息啦</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 29, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 7 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<p>title: 新功能
+date: 2024-06-29 21:55:08
+tags: 前后端代码</p>
+<hr>
+<h1 id="弄好公告栏的欢迎信息啦">弄好公告栏的欢迎信息啦
+</h1><p>找到之前失败的原因了：在腾讯位置服务获取”密钥“（key）以后，还要手动分配额度，不然无法使用。例如：坐标转换、IP定位每日调用量上限是10000（超过就无法使用，或者要购买配额），没分配配额则默认没有，也就无法访问，当所需的功能都分配完配额后就能正常显示地理位置了。
+（当然我在后台是无法知道访问者位置信息的，我目前还没有厉害到能获取他人具体位置，但以后说不准）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">//get请求
+</span></span><span class="line"><span class="cl">$.ajax({
+</span></span><span class="line"><span class="cl">    type: &#39;get&#39;,
+</span></span><span class="line"><span class="cl">    url: &#39;https://apis.map.qq.com/ws/location/v1/ip&#39;,
+</span></span><span class="line"><span class="cl">    data: {
+</span></span><span class="line"><span class="cl">        key: &#39;(我的密钥就不放出来了)&#39;,
+</span></span><span class="line"><span class="cl">        output: &#39;jsonp&#39;,
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    dataType: &#39;jsonp&#39;,
+</span></span><span class="line"><span class="cl">    success: function (res) {
+</span></span><span class="line"><span class="cl">        ipLoacation = res;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">function getDistance(e1, n1, e2, n2) {
+</span></span><span class="line"><span class="cl">    const R = 6371
+</span></span><span class="line"><span class="cl">    const { sin, cos, asin, PI, hypot } = Math
+</span></span><span class="line"><span class="cl">    let getPoint = (e, n) =&gt; {
+</span></span><span class="line"><span class="cl">        e *= PI / 180
+</span></span><span class="line"><span class="cl">        n *= PI / 180
+</span></span><span class="line"><span class="cl">        return { x: cos(n) * cos(e), y: cos(n) * sin(e), z: sin(n) }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    let a = getPoint(e1, n1)
+</span></span><span class="line"><span class="cl">    let b = getPoint(e2, n2)
+</span></span><span class="line"><span class="cl">    let c = hypot(a.x - b.x, a.y - b.y, a.z - b.z)
+</span></span><span class="line"><span class="cl">    let r = asin(c / 2) * 2 * R
+</span></span><span class="line"><span class="cl">    return Math.round(r);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">function showWelcome() {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+</span></span><span class="line"><span class="cl">    let pos = ipLoacation.result.ad_info.nation;
+</span></span><span class="line"><span class="cl">    let ip;
+</span></span><span class="line"><span class="cl">    let posdesc;
+</span></span><span class="line"><span class="cl">    //根据国家、省份、城市信息自定义欢迎语
+</span></span><span class="line"><span class="cl">    switch (ipLoacation.result.ad_info.nation) {
+</span></span><span class="line"><span class="cl">        case &#34;日本&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;よろしく，一起去看樱花吗&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;美国&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;Let us live in peace!&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;英国&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;想同你一起夜乘伦敦眼&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;俄罗斯&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;干了这瓶伏特加！&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;法国&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;C&#39;est La Vie&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;德国&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;Die Zeit verging im Fluge.&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;澳大利亚&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;一起去大堡礁吧！&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;加拿大&#34;:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;拾起一片枫叶赠予你&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        case &#34;中国&#34;:
+</span></span><span class="line"><span class="cl">            pos = ipLoacation.result.ad_info.province + &#34; &#34; + ipLoacation.result.ad_info.city + &#34; &#34; + ipLoacation.result.ad_info.district;
+</span></span><span class="line"><span class="cl">            ip = ipLoacation.result.ip;
+</span></span><span class="line"><span class="cl">            switch (ipLoacation.result.ad_info.province) {
+</span></span><span class="line"><span class="cl">                case &#34;北京市&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;北——京——欢迎你~~~&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;天津市&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;讲段相声吧。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;河北省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;山西省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;展开坐具长三尺，已占山河五百余。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;内蒙古自治区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;天苍苍，野茫茫，风吹草低见牛羊。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;辽宁省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;我想吃烤鸡架！&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;吉林省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;状元阁就是东北烧烤之王。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;黑龙江省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;喜欢哈尔滨大剧院。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;上海市&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;好想在魔都最高的楼顶喝酒。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;江苏省&#34;:
+</span></span><span class="line"><span class="cl">                    switch (ipLoacation.result.ad_info.city) {
+</span></span><span class="line"><span class="cl">                        case &#34;南京市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;这是我挺想去的城市。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        case &#34;苏州市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;上有天堂，下有苏杭。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        default:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;散装是必须要散装的。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;浙江省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;东风渐绿西湖柳，雁已还人未南归。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;河南省&#34;:
+</span></span><span class="line"><span class="cl">                    switch (ipLoacation.result.ad_info.city) {
+</span></span><span class="line"><span class="cl">                        case &#34;郑州市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;豫州之域，天地之中。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        case &#34;南阳市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;臣本布衣，躬耕于南阳。此南阳非彼南阳！&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        case &#34;驻马店市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;峰峰有奇石，石石挟仙气。嵖岈山的花很美哦！&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        case &#34;开封市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;刚正不阿包青天。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        case &#34;洛阳市&#34;:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;洛阳牡丹甲天下。&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                        default:
+</span></span><span class="line"><span class="cl">                            posdesc = &#34;可否带我品尝河南烩面啦？&#34;;
+</span></span><span class="line"><span class="cl">                            break;
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;安徽省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;蚌埠住了，芜湖起飞。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;福建省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;井邑白云间，岩城远带山。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;江西省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;落霞与孤鹜齐飞，秋水共长天一色。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;山东省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;遥望齐州九点烟，一泓海水杯中泻。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;湖北省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;来碗热干面！&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;湖南省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;74751，长沙斯塔克。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;广东省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;老板来两斤福建人。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;广西壮族自治区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;晚上一起去撩螺吃老友嘛？&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;海南省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;朝观日出逐白浪，夕看云起收霞光。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;四川省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;康康川妹子。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;贵州省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;茅台，学生，再塞200。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;云南省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;玉龙飞舞云缠绕，万仞冰川直耸天。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;西藏自治区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;躺在茫茫草原上，仰望蓝天。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;陕西省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;来份臊子面加馍。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;甘肃省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;羌笛何须怨杨柳，春风不度玉门关。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;青海省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;牛肉干和老酸奶都好好吃。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;宁夏回族自治区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;大漠孤烟直，长河落日圆。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;新疆维吾尔自治区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;驼铃古道丝绸路，胡马犹闻唐汉风。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;台湾省&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;我在这头，大陆在那头。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;香港特别行政区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;永定贼有残留地鬼嚎，迎击光非岁玉。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                case &#34;澳门特别行政区&#34;:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;性感荷官，在线发牌。&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">                default:
+</span></span><span class="line"><span class="cl">                    posdesc = &#34;带我去你的城市逛逛吧！&#34;;
+</span></span><span class="line"><span class="cl">                    break;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">        default:
+</span></span><span class="line"><span class="cl">            posdesc = &#34;带我去你的国家逛逛吧。&#34;;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    //根据本地时间切换欢迎语
+</span></span><span class="line"><span class="cl">    let timeChange;
+</span></span><span class="line"><span class="cl">    let date = new Date();
+</span></span><span class="line"><span class="cl">    if (date.getHours() &gt;= 5 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">11</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;上午好&lt;/span&gt;，一日之计在于晨！&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">if</span> <span class="err">(</span><span class="na">date</span><span class="err">.</span><span class="na">getHours</span><span class="err">()</span> <span class="p">&gt;</span>= 11 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">13</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;中午好&lt;/span&gt;，该摸鱼吃午饭了。&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">if</span> <span class="err">(</span><span class="na">date</span><span class="err">.</span><span class="na">getHours</span><span class="err">()</span> <span class="p">&gt;</span>= 13 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">15</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;下午好&lt;/span&gt;，懒懒地睡个午觉吧！&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">if</span> <span class="err">(</span><span class="na">date</span><span class="err">.</span><span class="na">getHours</span><span class="err">()</span> <span class="p">&gt;</span>= 15 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">16</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;三点几啦&lt;/span&gt;，一起饮茶呀！&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">if</span> <span class="err">(</span><span class="na">date</span><span class="err">.</span><span class="na">getHours</span><span class="err">()</span> <span class="p">&gt;</span>= 16 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">19</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;夕阳无限好！&lt;/span&gt;&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">if</span> <span class="err">(</span><span class="na">date</span><span class="err">.</span><span class="na">getHours</span><span class="err">()</span> <span class="p">&gt;</span>= 19 <span class="err">&amp;&amp;</span> date.getHours() <span class="p">&lt;</span> <span class="nt">24</span><span class="err">)</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;&lt;span&gt;晚上好&lt;/span&gt;，夜生活嗨起来！&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">else</span> <span class="na">timeChange </span><span class="o">=</span> <span class="s">&#34;夜深了，早点休息，少熬夜。&#34;</span><span class="err">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">try</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="err">//</span><span class="na">自定义文本和需要放的位置</span>
+</span></span><span class="line"><span class="cl">        <span class="na">document</span><span class="err">.</span><span class="na">getElementById</span><span class="err">(&#34;</span><span class="na">welcome-info</span><span class="err">&#34;).</span><span class="na">innerHTML </span><span class="o">=</span>
+</span></span><span class="line"><span class="cl">            <span class="s">`&lt;b</span><span class="p">&gt;&lt;</span><span class="nt">center</span><span class="p">&gt;</span>🎉 欢迎信息 🎉<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span><span class="ni">&amp;emsp;&amp;emsp;</span>欢迎来自 <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:var(--theme-color)&#34;</span><span class="p">&gt;</span>${pos}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> 的小伙伴，${timeChange}您现在距离博主约 <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:var(--theme-color)&#34;</span><span class="p">&gt;</span>${dist}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> 公里，当前的IP地址为： <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color:var(--theme-color)&#34;</span><span class="p">&gt;</span>${ip}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>， ${posdesc}<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>`;
+</span></span><span class="line"><span class="cl">    } catch (err) {
+</span></span><span class="line"><span class="cl">        // console.log(&#34;Pjax无法获取#welcome-info元素🙄🙄🙄&#34;)
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">window.onload = showWelcome;
+</span></span><span class="line"><span class="cl">// 如果使用了pjax在加上下面这行代码
+</span></span><span class="line"><span class="cl">document.addEventListener(&#39;pjax:complete&#39;, showWelcome);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">inject: 
+</span></span><span class="line"><span class="cl">  bottom: 
+</span></span><span class="line"><span class="cl">+    - <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> # jQuery
+</span></span><span class="line"><span class="cl">+    - <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">data-pjax</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/txmap.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> # 腾讯位置API
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">/* 欢迎信息 */
+</span></span><span class="line"><span class="cl">#welcome-info {
+</span></span><span class="line"><span class="cl">  background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+</span></span><span class="line"><span class="cl">  border-radius: 18px;
+</span></span><span class="line"><span class="cl">  padding: 8px;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">[data-theme=&#34;dark&#34;] #welcome-info {
+</span></span><span class="line"><span class="cl">  background: #212121;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hexo/">Hexo</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/hexo%E7%95%99%E6%A1%A3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hexo留档</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">今日上线内容</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">今日上线内容</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第一篇文章</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="//cdn.jsdelivr.net/npm/twikoo@1.6.21/dist/twikoo.all.min.js"></script>
+<div id="tcomment"></div>
+<style>
+    .twikoo {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    :root[data-scheme="dark"] {
+        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
+    }
+    .twikoo .el-input-group__prepend,
+    .twikoo .tk-action-icon,
+    .twikoo .tk-submit-action-icon,
+    .twikoo .tk-time,
+    .twikoo .tk-comments-no,
+    .twikoo .tk-comments-count {
+        color: var(--twikoo-body-text-color);
+    }
+    .twikoo .el-input__inner,
+    .twikoo .el-textarea__inner,
+    .twikoo .tk-preview-container,
+    .twikoo .tk-content,
+    .twikoo .tk-nick,
+    .twikoo .tk-send {
+        color: var(--twikoo-body-text-color-main);
+    }
+    .twikoo .el-button{
+        color: var(--twikoo-body-text-color)!important;
+    }
+    .twikoo .el-input__count {
+        color: var(--twikoo-body-text-color) !important;
+    }
+    .OwO .OwO-body {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+    }
+</style><script>
+    twikoo.init({
+        envId: 'https:\/\/twikoo.huangweiquan.cc\/',
+        el: '#tcomment',})
+</script>
+
+    
+
+
+
+
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 凯GINK
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
