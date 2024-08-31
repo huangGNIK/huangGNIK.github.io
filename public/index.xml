@@ -1160,6 +1160,14 @@
 </description>
         </item>
         <item>
+        <title>关于</title>
+        <link>https://example.com/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Sat, 30 Mar 2024 15:57:51 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%85%B3%E4%BA%8E/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>这个世界上大人够多了，你不用着急长大</title>
         <link>https://example.com/p/%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E4%B8%8A%E5%A4%A7%E4%BA%BA%E5%A4%9F%E5%A4%9A%E4%BA%86%E4%BD%A0%E4%B8%8D%E7%94%A8%E7%9D%80%E6%80%A5%E9%95%BF%E5%A4%A7/</link>
         <pubDate>Sun, 17 Mar 2024 01:06:11 +0800</pubDate>
@@ -1450,22 +1458,6 @@ categories: 日记&lt;/p&gt;
         
         <guid>https://example.com/archives/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>关于本人</title>
-        <link>https://example.com/%E5%85%B3%E4%BA%8E%E6%9C%AC%E4%BA%BA/</link>
-        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/%E5%85%B3%E4%BA%8E%E6%9C%AC%E4%BA%BA/</guid>
-        <description>&lt;hr&gt;
-&lt;h2 id=&#34;type-about&#34;&gt;title: 关于本人
-date: 2021-03-30 15:57:51
-aside: false
-top_img: false
-background: &amp;ldquo;#f8f9fe&amp;rdquo;
-comments: false
-type: &amp;ldquo;about&amp;rdquo;
-&lt;/h2&gt;</description>
         </item>
         <item>
         <title>链接</title>
