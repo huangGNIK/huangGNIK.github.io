@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/post/</loc>
-    <lastmod>2024-08-25T17:25:59+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/</loc>
-    <lastmod>2024-08-25T17:25:59+08:00</lastmod>
-  </url><url>
     <loc>https://example.com/categories/</loc>
     <lastmod>2024-08-14T09:34:20+08:00</lastmod>
   </url><url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
+  </url><url>
     <loc>https://example.com/tags/</loc>
+    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/</loc>
     <lastmod>2024-08-14T09:34:20+08:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/%E6%97%A5%E8%AE%B0/</loc>
@@ -49,9 +49,6 @@
   </url><url>
     <loc>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</loc>
     <lastmod>2024-06-27T19:39:37+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</loc>
-    <lastmod>2024-06-25T21:52:55+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2024-06-25T21:11:45+08:00</lastmod>
@@ -94,6 +91,9 @@
   </url><url>
     <loc>https://example.com/p/%E7%AB%99%E5%9C%A8%E5%B7%A8%E4%BA%BA%E7%9A%84%E8%82%A9%E8%86%80%E4%B8%8A/</loc>
     <lastmod>2023-12-27T23:51:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/%E6%A2%A6%E9%86%92/</loc>
+    <lastmod>2023-12-06T04:48:11+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/%E6%9C%80%E8%BF%91%E6%84%9F%E8%A7%89%E7%8A%B6%E6%80%81%E6%8C%BA%E8%BF%B7%E8%8C%AB%E7%9A%84/</loc>
     <lastmod>2023-11-28T00:03:53+08:00</lastmod>
