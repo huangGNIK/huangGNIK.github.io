@@ -639,277 +639,6 @@
         <item>
         <title>今日上线内容</title>
         <link>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</link>
-        <pubDate>Thu, 27 Jun 2024 19:39:37 +0800</pubDate>
-        
-        <guid>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</guid>
-        <description>&lt;h1 id=&#34;今日上线&#34;&gt;今日上线
-&lt;/h1&gt;&lt;h2 id=&#34;完善留言板功能&#34;&gt;完善留言板功能
-&lt;/h2&gt;&lt;p&gt;现在可以在留言板评论了，在云函数—Vercel部署，用到了MongoDB、Vercl、Github，教程文件：https://twikoo.js.org/backend.html，2022年的，MongoDB界面变化挺多。（这一步不需要代码，配置后放置在选定的目录位置就好了）&lt;/p&gt;
-&lt;p&gt;“留言板”页面：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# envelope_comment
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# see https://akilar.top/posts/e2d3c450/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;envelope_comment:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  enable: true #控制开关
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  custom_pic:      
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  message: #信笺正文，多行文本，写法如下
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - 有什么想问的？
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - 有什么想说的？
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - 有什么想吐槽的？
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    - 哪怕是有什么想吃的，都可以告诉我哦~
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  height: #1050px，信封划出的高度
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  front_matter: #【可选】comments页面的 front_matter 配置
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title: 留言板
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comments: true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;完善关于本人页面&#34;&gt;完善“关于本人“页面
-&lt;/h2&gt;&lt;p&gt;“关于本人”页面：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- class_name: 关于本人
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  subtitle: 自由散漫，野蛮生长，四季温暖✨
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  avatarImg: https://www.pnglog.com/RTb8Sb.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  avatarSkills:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    left:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 🤖️ 机械爱好者
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 🔍 好奇宝宝
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 🏠 大美食家
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 🔨 拆家小能手
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    right:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 喜欢旅行 🤝
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 热爱跑步 🏃
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 氛围组组长 🧱
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 狼人别杀我 💢
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  name: 黄维权
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  description: 是一名 大三工科生 未来的嵌入式工程师
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  aboutsiteTips:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tips: 追求自由
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title1: 源于
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title2: 热爱而去 感受
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    word:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 学习
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 生活
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 编程
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - 体验
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  helloAbout: Hello there!
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  skillsTips:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tips: 技能
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title: 加载ing（现在没想好放什么图标）
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  careers:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tips: 生涯
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title: 不断进步
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    list:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - desc: BBGU,自动化专业
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        color: &amp;#34;#357ef5&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - desc: 未来的大厂工程师
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        color: &amp;#34;#357ef5&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    img: 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  statistic:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    link: /archives
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    text: 文章隧道
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  map:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    title: 我现在住在
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    StrengthenTitle: 广西，南宁市
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    background: https://www.pnglog.com/7AvbPq.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  selfInfo:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoTips1: 生于
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoContentYear: 2002
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoTips2: 北部湾大学
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoContent2: 自动化
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoTips3: 现在职业
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    selfInfoContent3: 大三学生👨‍🎓
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  personalities:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    author_name: 辩论家
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    personality_type: ENTP-A
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    photo_url: https://www.pnglog.com/xsnwPX.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    personality_img: https://www.pnglog.com/XjQfdB.png
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    name_url: https://www.16personalities.com/ch/entp-%E4%BA%BA%E6%A0%BC
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  maxim:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    maxim_tips: 座右铭
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    maxim_top: 去向打倒你的人学习，
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    maxim_bottom: 直到你比他更强。
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  buff:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    buff_tips: 特长
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    buff_top: 又菜又爱玩的 吉他手、国足最后的希望、篮球运动员
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    buff_bottom: 机器控制 ，做饭好吃指数：MAX
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  game:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    game_tips: 爱好游戏
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    game_title: 英雄联盟（LOL）
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    game_uid: &amp;#34;艾欧尼亚：凯GNIK #81646&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    game_bg: https://www.pnglog.com/PW5eE6.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  comic:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comic_tips: 推荐番剧
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comic_title: 追番
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comic_list:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - name: 约定的梦幻岛
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - name: 咒术回战
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - name: 紫罗兰永恒花园
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - name: 鬼灭之刃
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - name: JOJO的奇妙冒险 黄金之风
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  like:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    like_tips: 关注偏好
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    like_title: 科技
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    like_bottom: 机器人控制、智能小车
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  music:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    music_tips: 音乐偏好
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    music_title: 万能青年旅舍、民谣、华语流行
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    music_bg: https://www.pnglog.com/ca3KTd.png
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    music_link: /music
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;过几天打算在公告栏放一个欢迎信息并且显示地理位置，今天按照Fomalhaut的魔改教程却怎么都显示不出来，调试后的上线效果也不理想，（没有报错，还没找到显示不出的原因）。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>今日上线内容</title>
-        <link>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</link>
         <pubDate>Tue, 25 Jun 2024 21:52:55 +0800</pubDate>
         
         <guid>https://example.com/p/%E4%BB%8A%E6%97%A5%E4%B8%8A%E7%BA%BF%E5%86%85%E5%AE%B9/</guid>
@@ -1020,40 +749,13 @@
 </description>
         </item>
         <item>
-        <title>突突然想到了之前都假想：我们所出都</title>
-        <link>https://example.com/p/%E7%AA%81%E7%AA%81%E7%84%B6%E6%83%B3%E5%88%B0%E4%BA%86%E4%B9%8B%E5%89%8D%E9%83%BD%E5%81%87%E6%83%B3%E6%88%91%E4%BB%AC%E6%89%80%E5%87%BA%E9%83%BD/</link>
-        <pubDate>Sat, 11 May 2024 02:34:39 +0800</pubDate>
-        
-        <guid>https://example.com/p/%E7%AA%81%E7%AA%81%E7%84%B6%E6%83%B3%E5%88%B0%E4%BA%86%E4%B9%8B%E5%89%8D%E9%83%BD%E5%81%87%E6%83%B3%E6%88%91%E4%BB%AC%E6%89%80%E5%87%BA%E9%83%BD/</guid>
-        <description>&lt;p&gt;突然想到了之前都假想：我们所出都&lt;/p&gt;
-&lt;h1 id=&#34;突然想到了之前都假想我们所出都这个世界很有可能是由更高维生物创造的一种游戏或者是实验&#34;&gt;突然想到了之前都假想：我们所出都这个世界很有可能是由更高维生物创造的一种游戏（或者是实验）。
-&lt;/h1&gt;&lt;p&gt;未来地球会是怎么样的？短短几百年间，科技高速发展，已然成几何倍数增长了。数百年间我们已经能深入海底窥探地球、飞上太空探索宇宙，高倍望远镜能看到数百光年外的星球。核能、太阳能、风能、电能、生物能等各种能源几乎开发到了极致。&lt;/p&gt;
-&lt;p&gt;我们想要探索更外面的世界只靠地球是办不到的，因为能源是有限的，就像培养箱里的动植物是很难打破边界逃离培养箱去到外面的世界的。很难，不代表不能。&lt;/p&gt;
-&lt;p&gt;我们无法单纯依靠地球，所以需要去外太空，所有的能源都是有限的，太阳能源源不断提供到地球上，又因能量不停转换，地球得以发展，地球有点像吸血鬼，被动的吸收太阳的能量来壮大自己。&lt;/p&gt;
-&lt;p&gt;而发展酒需要更多能量，探索太空的能量出自哪里？出自地球本身，我们又在消耗自己的能量用于发射卫星、发射火箭探索太空。&lt;/p&gt;
-&lt;p&gt;纯粹的靠太阳能，然后在地球自给自足当然也可以，不过会发展得很慢。&lt;/p&gt;
-&lt;p&gt;元素一定不止是有元素周期表上的，还有那些未知的，存在别的星球的，就像能源，我们需要能源来发展自己，培养箱里所有的能量都被一个芽苗吸收，终于有一天，它也会穿破那层铁壳，汲取更外界的能量，长成参天大树。&lt;/p&gt;
-&lt;p&gt;地球就是如此，按部就班可以依靠太阳活很久，可太阳有一天熄灭了，那就是灭顶之灾，只有不停的找资源，壮大太阳系或是离开太阳系才能突破桎梏。&lt;/p&gt;
-&lt;p&gt;生物法则总是这样，总结起来就这几个字：*&lt;strong&gt;掠夺资源*&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;从古时候就为了掠夺猎物打架，然后是为了铁打架、为了土地打架、为了金钱打架、为了石油等能源打架。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;我们总有一天会通过掠夺太阳系的能源离开太阳系，然后再掠夺其他星系的能源。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;也许未来地球会被称为母星，而月球是第一个殖民星（能源星），接着到火星、然后是其他星系。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;宇宙不可能只存在地球这一产生了高等智慧生物的星球，未来一定会与其他星系上的智慧星球生物打交道。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;*&lt;strong&gt;为了掠夺资源，宇宙贸易、星际战争、星球殖民不会遥远*&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;不到1000年，我们一点能冲出太阳系。&lt;/p&gt;
-&lt;p&gt;现在发展太空的国家更有主动权，若是在月球或是火星发现更强的能源，然后带回国运用起来，那便是升阶的提高，能远远的领先于其他国家。&lt;/p&gt;
-&lt;p&gt;一想到未来玩的后代也许不在母星（地球）出生，而是在太阳系外的殖民星出生，而且那个星球上还有其他外星人，想想都很有趣。&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>我们所处的这个世界很有可能是由更高维生物创造的一种游戏</title>
         <link>https://example.com/p/%E6%88%91%E4%BB%AC%E6%89%80%E5%A4%84%E7%9A%84%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%BE%88%E6%9C%89%E5%8F%AF%E8%83%BD%E6%98%AF%E7%94%B1%E6%9B%B4%E9%AB%98%E7%BB%B4%E7%94%9F%E7%89%A9%E5%88%9B%E9%80%A0%E7%9A%84%E4%B8%80%E7%A7%8D%E6%B8%B8%E6%88%8F/</link>
         <pubDate>Sat, 11 May 2024 02:34:39 +0800</pubDate>
         
         <guid>https://example.com/p/%E6%88%91%E4%BB%AC%E6%89%80%E5%A4%84%E7%9A%84%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%BE%88%E6%9C%89%E5%8F%AF%E8%83%BD%E6%98%AF%E7%94%B1%E6%9B%B4%E9%AB%98%E7%BB%B4%E7%94%9F%E7%89%A9%E5%88%9B%E9%80%A0%E7%9A%84%E4%B8%80%E7%A7%8D%E6%B8%B8%E6%88%8F/</guid>
-        <description>&lt;h1 id=&#34;突然想到了之前都假想我们处的这个世界很有可能是由更高维生物创造的一种游戏&#34;&gt;突然想到了之前都假想：我们处的这个世界很有可能是由更高维生物创造的一种游戏
-&lt;/h1&gt;&lt;p&gt;突然想到了之前的假想：我们所处的这个世界很有可能是由更高维生物创造的一种游戏（或者是实验）。&lt;/p&gt;
-&lt;p&gt;未来地球会是怎么样的？短短几百年间，科技高速发展，已然成几何倍数增长了。数百年间我们已经能深入海底窥探地球、飞上太空探索宇宙，高倍望远镜能看到数百光年外的星球。核能、太阳能、风能、电能、生物能等各种能源几乎开发到了极致。&lt;/p&gt;
+        <description>&lt;h1 id=&#34;突然想到了之前都假想我们处的这个世界很有可能是由更高维生物创造的一种游戏或者是实验&#34;&gt;突然想到了之前都假想：我们处的这个世界很有可能是由更高维生物创造的一种游戏（或者是实验）。
+&lt;/h1&gt;&lt;p&gt;未来地球会是怎么样的？短短几百年间，科技高速发展，已然成几何倍数增长了。数百年间我们已经能深入海底窥探地球、飞上太空探索宇宙，高倍望远镜能看到数百光年外的星球。核能、太阳能、风能、电能、生物能等各种能源几乎开发到了极致。&lt;/p&gt;
 &lt;p&gt;我们想要探索更外面的世界只靠地球是办不到的，因为能源是有限的，就像培养箱里的动植物是很难打破边界逃离培养箱去到外面的世界的。很难，不代表不能。&lt;/p&gt;
 &lt;p&gt;我们无法单纯依靠地球，所以需要去外太空，所有的能源都是有限的，太阳能源源不断提供到地球上，又因能量不停转换，地球得以发展，地球有点像吸血鬼，被动的吸收太阳的能量来壮大自己。&lt;/p&gt;
 &lt;p&gt;而发展酒需要更多能量，探索太空的能量出自哪里？出自地球本身，我们又在消耗自己的能量用于发射卫星、发射火箭探索太空。&lt;/p&gt;
@@ -1077,8 +779,7 @@
         <pubDate>Sat, 27 Apr 2024 03:28:45 +0800</pubDate>
         
         <guid>https://example.com/p/%E4%BB%8A%E6%97%A5%E6%80%9D%E8%80%83%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA%E9%85%92%E9%A6%86%E9%9C%80%E8%A6%81%E6%80%8E%E4%B9%88%E5%81%9A/</guid>
-        <description>&lt;p&gt;今日思考：做好一个酒馆需要怎么做？&lt;/p&gt;
-&lt;p&gt;今天去了一家还没正式开业的酒馆（闲聊中老板对这家店的定位是餐吧），由于店铺没有任何标识，入口处如下，刚进去时也只看到吧台、喝制啤酒的机器，所以目前我更愿意称呼它为酒馆。&lt;/p&gt;
+        <description>&lt;p&gt;今天去了一家还没正式开业的酒馆（闲聊中老板对这家店的定位是餐吧），由于店铺没有任何标识，入口处如下，刚进去时也只看到吧台、喝制啤酒的机器，所以目前我更愿意称呼它为酒馆。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.pnglog.com/8DiD5f.jpg&#34;
 	
 	
@@ -1117,8 +818,8 @@
         <pubDate>Wed, 24 Apr 2024 08:54:28 +0800</pubDate>
         
         <guid>https://example.com/p/%E4%BB%8A%E6%97%A5%E6%80%9D%E8%80%83/</guid>
-        <description>&lt;h1 id=&#34;婚姻和恋爱的区别&#34;&gt;婚姻和恋爱的区别
-&lt;/h1&gt;&lt;p&gt;恋爱用于筛选婚姻，恋爱是广泛的，是两性交往的过程，婚姻和恋爱本质没必然关系。&lt;/p&gt;
+        <description>&lt;p&gt;婚姻和恋爱的区别&lt;/p&gt;
+&lt;p&gt;恋爱用于筛选婚姻，恋爱是广泛的，是两性交往的过程，婚姻和恋爱本质没必然关系。&lt;/p&gt;
 &lt;p&gt;“不以结婚为目的谈恋爱就是耍流氓”&lt;/p&gt;
 &lt;p&gt;这句话我并不很认可，有谈了恋爱结婚的，有谈了恋爱没结婚的，也有没谈恋爱就结婚的。（闪婚风险很大）&lt;/p&gt;
 &lt;p&gt;恋爱应该是确认两个人是否合适的实验过程，良性的恋爱是能放得开的，确认恋爱关系就大胆去爱、认真去爱；若是单方觉得两人不合适，那便提出分手，然后经历磨合，依旧不合适，便是和平分手。（正常来说，如果两人三观都挺好，不会出现分手报复行为的）&lt;/p&gt;
@@ -1255,8 +956,7 @@
         <pubDate>Wed, 06 Dec 2023 04:48:11 +0800</pubDate>
         
         <guid>https://example.com/p/%E6%A2%A6%E9%86%92/</guid>
-        <description>&lt;h1 id=&#34;梦醒&#34;&gt;梦醒
-&lt;/h1&gt;&lt;p&gt;斯诺大陆，地广辽阔，云层显得很低。由于星球太大，地心引力很大，仅有无尽城邦能飞离星球，掌握太空卫星，却依旧去不到距离斯诺大陆最近百万光年的恒星（太阳），却可以部分依靠巨大的太阳能转化小部分能量供给使用。&lt;/p&gt;
+        <description>&lt;p&gt;斯诺大陆，地广辽阔，云层显得很低。由于星球太大，地心引力很大，仅有无尽城邦能飞离星球，掌握太空卫星，却依旧去不到距离斯诺大陆最近百万光年的恒星（太阳），却可以部分依靠巨大的太阳能转化小部分能量供给使用。&lt;/p&gt;
 &lt;p&gt;掌握跨时代科技的 无尽城邦。（由某王国不断发展而来）&lt;/p&gt;
 &lt;p&gt;（尽管科技水平极高，可依旧需付出极大代价才能暴力毁灭特殊矿石、木树、地脉岩。&lt;/p&gt;
 &lt;p&gt;半悬于巨型矿山，（城市下方为采石场、贫民区、普通居住区）（城市上方几乎为钢筋水泥，高耸如云的科技大厦，具有数亿根由硬度极高的合成钢建成的运输塔（支撑城市以及运输资源）&lt;/p&gt;
@@ -1276,8 +976,7 @@
         <pubDate>Tue, 28 Nov 2023 00:03:53 +0800</pubDate>
         
         <guid>https://example.com/p/%E6%9C%80%E8%BF%91%E6%84%9F%E8%A7%89%E7%8A%B6%E6%80%81%E6%8C%BA%E8%BF%B7%E8%8C%AB%E7%9A%84/</guid>
-        <description>&lt;h1 id=&#34;最近感觉状态挺低迷的&#34;&gt;最近感觉状态挺低迷的
-&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://www.pnglog.com/OUNFX2.jpg&#34;
+        <description>&lt;p&gt;&lt;img src=&#34;https://www.pnglog.com/OUNFX2.jpg&#34;
 	
 	
 	
@@ -1310,13 +1009,12 @@
 </description>
         </item>
         <item>
-        <title>最近刷到《再见爱人》</title>
-        <link>https://example.com/p/%E6%9C%80%E8%BF%91%E5%88%B7%E5%88%B0%E5%86%8D%E8%A7%81%E7%88%B1%E4%BA%BA/</link>
+        <title>《再见爱人》</title>
+        <link>https://example.com/p/%E5%86%8D%E8%A7%81%E7%88%B1%E4%BA%BA/</link>
         <pubDate>Thu, 02 Nov 2023 21:30:15 +0800</pubDate>
         
-        <guid>https://example.com/p/%E6%9C%80%E8%BF%91%E5%88%B7%E5%88%B0%E5%86%8D%E8%A7%81%E7%88%B1%E4%BA%BA/</guid>
-        <description>&lt;h1 id=&#34;最近刷到再见爱人&#34;&gt;最近刷到《再见爱人》
-&lt;/h1&gt;&lt;p&gt;最近刷到《再见爱人》，傅首尔和老刘的感情问题，思考到了很多，对其不做好坏的评判。&lt;/p&gt;
+        <guid>https://example.com/p/%E5%86%8D%E8%A7%81%E7%88%B1%E4%BA%BA/</guid>
+        <description>&lt;p&gt;最近刷到《再见爱人》，傅首尔和老刘的感情问题，思考到了很多，对其不做好坏的评判。&lt;/p&gt;
 &lt;p&gt;看出来的是老刘确实很爱傅首尔，这段中年人的感情问题很大原因是财产问题，很多年前他们可能并不富裕，老刘和傅首尔也没外在优势，经济基础也是结婚后共同稳固的，不同的是在近期傅首尔出名后经济来源驺升。&lt;/p&gt;
 &lt;p&gt;年轻时可能是凑合着过，一对平平无奇的小夫妻共同经营自己的小家，老刘有点恋爱脑，却挣不了什么大钱；傅首尔更为理性，更具有功利心上进心，感性的地方需求量太大，想要的另一半满足她、迎合她，希望老刘可以有自己成功的事业，希望老刘可以给她浪漫，希望老刘可以顾家，从而批判老刘，可老刘只能做到顾家一点。&lt;/p&gt;
 &lt;p&gt;还是那句话：物质基础决定上层建筑&lt;/p&gt;
