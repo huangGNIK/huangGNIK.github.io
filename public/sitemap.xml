@@ -14,13 +14,13 @@
     <loc>https://example.com/</loc>
     <lastmod>2024-08-14T09:34:20+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
-  </url><url>
     <loc>https://example.com/p/%E6%9A%91%E6%9C%9F%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2024-08-14T09:34:20+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2024-08-14T09:34:20+08:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/hugo/</loc>
