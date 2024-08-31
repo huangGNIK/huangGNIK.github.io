@@ -150,3 +150,9 @@ params:
 
 [taxonomies]
    series = "series"
+bottom:
+  # 51la统计&灵雀统计
+  - <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+  - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+  - <script> LA.init({id:"{YOU ID}",ck:"{YOU CK}"})</script>
+  - <script>new LingQue.Monitor().init({id:"YOU ID",sendSuspicious:true});</script>
