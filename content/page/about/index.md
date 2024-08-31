@@ -1,6 +1,8 @@
 ---
-title: 关于
-date: 2024-03-30 15:57:51
+title: "关于"
+date: 2024-06-20
+layout: "about"
+slug: "about"
 aside: false
 top_img: false
 background: "#f8f9fe"
