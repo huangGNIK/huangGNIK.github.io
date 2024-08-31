@@ -131,7 +131,7 @@
     <loc>https://example.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://example.com/%E5%85%B3%E4%BA%8E%E6%9C%AC%E4%BA%BA/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.com/categories/test/</loc>
